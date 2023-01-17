@@ -49,7 +49,7 @@ body{
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background-image: url('/home/wtc/musicPlayer/index.png');
+    background-image: url('images/two.jpeg');
     background-size: cover;
     box-shadow: 0 0 0 10px rgb(255, 255, 225, 0.08);
     animation: rotate 20s linear infinite;
@@ -67,8 +67,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    width: 30%;
-    height: 30%;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: #5c66f8;
 }
@@ -146,7 +146,7 @@ body{
     transform-origin: center;
 }
 
-.play-button span:nth-child(2) {
+.play-button.pause span:nth-child(2) {
     transform: translateY(-50% ) scaleY(0);
 }
 
@@ -181,7 +181,7 @@ body{
 .btn{
     width: 40px;
     height: 40px;
-    background: #5c66f8;
+    background: #f1f1f3;
     border-radius: 50%;
     display: flex;
     justify-content: center;
