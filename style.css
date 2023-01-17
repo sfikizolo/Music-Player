@@ -52,6 +52,13 @@ body{
     background-image: url('/home/wtc/musicPlayer/index.png');
     background-size: cover;
     box-shadow: 0 0 0 10px rgb(255, 255, 225, 0.08);
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+
+}
+
+.disk.play{
+    animation-play-state: running;
 }
 
 .disk::before{
@@ -101,9 +108,9 @@ body{
 }
 
 .controls{
-    width: 100%;
+    width: 60%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: auto;
     margin-top: 20px;
@@ -131,6 +138,7 @@ body{
     border-radius: 2px;
     background: #5c66f8;
     transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .play-button span:nth-child(2){
@@ -138,8 +146,57 @@ body{
     transform-origin: center;
 }
 
-/* .play-button span:nth-child(2) {
+.play-button span:nth-child(2) {
     transform: translateY(-50% ) scaleY(0);
-} */
+}
 
+.play-button.pause span:nth-child(1){
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0,100% 50%, 100% 50%, 0% 100%);
+}
+
+.play-button.pause{
+    animation: pulse 2s linear infinite;
+
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0;
+    }
+    
+    50% {
+        box-shadow: 0 0 0 5px rgb(255, 255, 225, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 5px rgb(255, 255, 225, 0.4);
+    }
+    
+}
+
+.btn{
+    width: 40px;
+    height: 40px;
+    background: #5c66f8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
